@@ -18,7 +18,7 @@ proc pivotal(token: string, api_root: string = "https://www.pivotaltracker.com/s
 when isMainModule:
   include cligen/mergeCfgEnv
   clCfg.version = NimblePkgVersion
-  dispatch(pivotal, short = {"api_root" : '\0'}, help = {
+  dispatch(pivotal, cmdname = "pivotal", short = {"api_root" : '\0'}, help = {
     "token": "Pivotal tracker API token. Get it at https://www.pivotaltracker.com/profile",
     "api-root": "Change the pivotal tracker API root",
     "id": "Pivotal story you wish to use",
